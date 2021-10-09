@@ -47,7 +47,10 @@ func userLogin(c *gin.Context) {
 	//用openid构建数据库
 	// var openid opid
 	// c.BindJSON(&openid)
-
+	c.JSON(200, gin.H{
+		"openid":  res.Openid,
+		"unionid": res.Unionid,
+	})
 	db := mysql.Getlink()
 	if err != nil {
 		log.Fatal("Open connection failed:", err.Error())

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"bobing/routes"
+	"t1/routes"
 )
 
 // 返回数据的结构
